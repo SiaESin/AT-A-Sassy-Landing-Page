@@ -1,3 +1,7 @@
+//How can we gain access to the partials we created in this file?
+@import "btnConfig";
+@import "config";
+@import "utilities";
 
 * {
   box-sizing: border-box;
@@ -21,14 +25,68 @@ a {
 
 .hero {
   // This is where the bulk of the SCSS styling needs to be done
-
   // Take a look at the other files we've built already. How can they be useful here?
-
   // Also, take time to review the features of SCSS we've already covered:
   // 1. $variables
   // 2. nesting (dont forget about the ampersand (&) parent selector!)
   // 3. At-Rules
+  @include set-bg($primary-color);
+  color: $font-color;
+  height: 780px;
+  
+  //The nav needs some styling.
+  nav {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    .banner {
+      font-size: 1.5rem;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+    }
+
+    li {
+      padding: 1rem;
+    }
+
+    a {
+      color: $font-color;
+    }
+
+    a:hover {
+      color: $secondary-color;
+    }
+  }   
+  
+  //hero-content Hint: this content can be accessed as a nested property via the (&) ampersand selector within the .hero class.
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: left;
+    // padding: 0 20%;
+    margin-top: 45px;
+
+  h1 {
+    font-size: 3rem;
+  }
+    img {
+      width: 500px;
+    }
+  }
 }
+
+
+
+
+
+
 
 // This code is related to some of the aspects of SCSS we have yet to cover.
 // While you don't have to mess with it, it would be advisable to attempt to understand its functionality.
