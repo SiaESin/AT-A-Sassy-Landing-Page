@@ -32,7 +32,7 @@ a {
   // 3. At-Rules
   @include set-bg($primary-color);
   color: $font-color;
-  height: 780px;
+  height: 775px;
   
   //The nav needs some styling.
   nav {
@@ -42,7 +42,8 @@ a {
     align-items: center;
   
     .banner {
-      font-size: 1.5rem;
+      font-size: 26px;
+      
     }
 
     ul {
@@ -51,7 +52,8 @@ a {
     }
 
     li {
-      padding: 1rem;
+      padding: .5rem;
+      font-size: 17px;
     }
 
     a {
@@ -76,8 +78,12 @@ a {
   h1 {
     font-size: 3rem;
   }
+
+  p {
+    font-size: 17px;
+  }
     img {
-      width: 500px;
+      width: 60%;
     }
   }
 }
